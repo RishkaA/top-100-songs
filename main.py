@@ -74,8 +74,7 @@ class Playlist():
         """
         creates a new playlist in user's spotify account
         """
-        new_playlist = self.sp.user_playlist_create(user=self.user_id, name=f"{self.date} Billboard 100", public=False,
-                                                    description="Top 100 from the date")
+        new_playlist = self.sp.user_playlist_create(user=self.user_id, name=f"{self.date} Billboard 100", public=False, description="Top 100 from the date")
         self.new_playlist_id = new_playlist["id"]
 
         self.add_songs()
